@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase | E-commerce Product Catalog</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">ShopEase<span>.</span></a>
+    <div class="header-actions">
+      <span class="tagline">Find your favorites</span>
+      <button class="cart-button" id="cartButton" type="button">
+        🛒 Cart <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR EVERYDAY MARKETPLACE</p>
+      <h1>Discover Your Next Favorite.</h1>
+      <p>Explore quality products, great deals, and everyday essentials.</p>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog-heading">
+        <div>
+          <h2>Our Products</h2>
+          <p id="productCount">Loading products...</p>
+        </div>
+        <input id="searchInput" type="search"
+          placeholder="Search products..." aria-label="Search products">
+      </div>
+
+      <div class="filters">
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Home">Home</option>
+          <option value="Accessories">Accessories</option>
+        </select>
+
+        <select id="priceFilter" aria-label="Filter by price">
+          <option value="all">All Prices</option>
+          <option value="0-2000">Under Rs. 2,000</option>
+          <option value="2000-5000">Rs. 2,000–5,000</option>
+          <option value="5000-15000">Rs. 5,000–15,000</option>
+          <option value="15000-50000">Rs. 15,000–50,000</option>
+          <option value="50000-plus">Above Rs. 50,000</option>
+        </select>
+
+        <select id="sortFilter" aria-label="Sort products by price">
+          <option value="default">Default Sorting</option>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+          <option value="rating">Highest Rated</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-message" id="emptyMessage" hidden>
+        No products found. Try changing your search or filters.
+      </p>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel"
+    aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-heading">
+      <h2>Your Shopping Cart</h2>
+      <button class="close-button" id="closeCart"
+        type="button" aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total</span>
+        <strong id="cartTotal">Rs. 0</strong>
+      </div>
+      <button class="clear-button" id="clearCart" type="button">
+        Clear Cart
+      </button>
+      <p class="cart-note">
+        Demo catalog only. Checkout and payment are not enabled.
+      </p>
+    </div>
+  </aside>
+
+  <footer>
+    <p>© 2026 ShopEase. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+</html>
